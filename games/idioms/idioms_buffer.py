@@ -4,7 +4,7 @@ from qqbot import logger
 
 all_idioms: set = set()
 first_char_map: dict = dict()
-with open(os.path.join(os.path.dirname(__file__), "idiom.txt"), 'r') as f:
+with open(os.path.join(os.path.dirname(__file__), "idiom.txt"), 'r', encoding='gbk') as f:
     for line in f.readlines():
         all_idioms.add(line.strip())
         first_char = line[0]
